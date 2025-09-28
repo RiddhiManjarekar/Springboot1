@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: expensetracker
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/expensetracker
+    username: root
+    password: "@Manja05"   # <-- change this to your MySQL password
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update   # creates/updates tables automatically
+    show-sql: true
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    properties:
+      hibernate:
+        format_sql: true
+
+server:
+  port: 8080
